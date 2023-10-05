@@ -1,6 +1,5 @@
 import ListProduct from "@/_components/molecules/ListProduct";
 import { Product } from "@/types/product.type";
-import Image from "next/image";
 
 export default async function Home() {
   const res = await fetch("https://dummyjson.com/products?limit=8&skip=10");

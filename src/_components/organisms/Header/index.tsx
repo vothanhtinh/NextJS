@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 // Styled
 import { IconCartStyle, IconCartWrapper } from "./styled";
 import { Button, Dropdown, Select, Space } from "antd";
-import LocaleSwitcher from "@/_components/molecules/LocaleSwitcher";
 export default function Header() {
   const navigation = [
     { title: "home", path: "/" },
@@ -24,16 +23,16 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="items-center pt-3 px-2 mx-auto  sm:px-4 sm:flex sm:space-x-8 fixed top-0  z-50 bg-white w-full">
+      <nav className="flex justify-between items-center pt-3 px-2 mx-auto  sm:px-4 sm:flex sm:space-x-8 fixed top-0  z-50 bg-white w-full">
         <Link href="/">
           <div className="flex justify-center items-center">
-            <Image
+            {/* <Image
               src="/travel-blog-logo.webp"
               alt="logo"
               width={100}
               height={50}
               className="h-20"
-            />
+            /> */}
             <h2 className="font-bold text-xl text-secondary-500 ml-3 mt-2">
               My Starter Site
             </h2>
@@ -54,8 +53,6 @@ export default function Header() {
               <IconCartStyle>4</IconCartStyle>
             </Link>
           </IconCartWrapper>
-
-          <LocaleSwitcher />
         </ul>
       </nav>
     </header>
